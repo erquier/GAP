@@ -63,11 +63,7 @@
                         <th>Historial</th>
                     </tr>
 
-                    <g:each in="${filmsList}" var="f">
 
-                        <td>${f.rentalDuration}</td>
-
-                    </g:each>
 
                 </table>
 

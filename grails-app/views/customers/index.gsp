@@ -19,7 +19,7 @@
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
             %{--<f:table collection="${customersList}" />--}%
-
+            <a href="/films">Films</a>
             <table class='display'>
                 <tr>
                     <th>Name</th>

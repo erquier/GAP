@@ -24,6 +24,7 @@
         <div class="message" role="status">${flash.message}</div>
     </g:if>
 %{--<f:table collection="${filmsList}" />--}%
+    <a href="/customers">Customers</a>
     <table class='display'>
         <tr>
             <th>Title</th>
