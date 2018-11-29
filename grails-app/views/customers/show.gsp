@@ -60,12 +60,28 @@
 
                 <table class="display">
                     <tr>
-                        <th>Historial</th>
+                        <th>Film Name</th>
+                        <th>Rental Date</th>
+                        <th>Return Date</th>
+                        <th>Film ID</th>
+                        <th>Rental ID</th>
+                        <th>Staff ID</th>
                     </tr>
 
+                    <g:each in="${customers.rentals}" var="r">
+                        <tr>
+                            <td>${r.filmName}</td>
+                            <td>${r.rentalDate}</td>
+                            <td>${r.returnDate}</td>
+                            <td>${r.fimlId}</td>
+                            <td>${r.rentalId}</td>
+                            <td>${r.staffId}</td>
+                            <td><g:link controller="rentals" action="show" id="${r.id}">Details</g:link></td>
+                        </tr>
 
-
+                    </g:each>
                 </table>
+            </div>
 
 
             <div class="col-md-12">
