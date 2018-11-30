@@ -60,24 +60,31 @@
 
                 <table class="display">
                     <tr>
-                        <th>Film ID</th>
-                        <th>Film title</th>
-                        <th>Rental date</th>
+                        <th>Film Name</th>
+                        <th>Rental Date</th>
                         <th>Return Date</th>
+                        <th>Film ID</th>
+                        <th>Rental ID</th>
+                        <th>Staff ID</th>
                     </tr>
 
                     <g:each in="${customers.rentals}" var="r">
                         <tr>
-                            <td>${r.filmId}</td>
-                            <td>${r.filmTitle}</td>
+                            <td>${r.filmName}</td>
                             <td>${r.rentalDate}</td>
                             <td>${r.returnDate}</td>
-                            <g:link action="showRentals" id="${r.filmId} "></g:link>
+                            <td>${r.fimlId}</td>
+                            <td>${r.rentalId}</td>
+                            <td>${r.staffId}</td>
+                            <td><g:link controller="rentals" action="show" id="${r.id}">Details</g:link></td>
                         </tr>
+
                     </g:each>
                 </table>
+            </div>
 
-            <div class="col-md-6">
+
+            <div class="col-md-12">
             <g:form resource="${this.customers}" method="DELETE">
                 <fieldset class="buttons">
                     <g:link class="edit" action="edit" resource="${this.customers}"><g:message code="default.button.edit.label" default="Edit" /></g:link>

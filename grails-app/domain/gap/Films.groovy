@@ -12,7 +12,8 @@ class Films {
     Double replacementCost
 
     List<Actors> actors
-    static embedded = ['actors']
+    List<Rentals> rentals
+    static embedded = ['actors', 'rentals']
 
 
 }
