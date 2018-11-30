@@ -7,4 +7,7 @@ class Customers {
     String address
     String city
     String country
+
+    List<Rentals> rentals
+    static embedded = ['rentals']
 }

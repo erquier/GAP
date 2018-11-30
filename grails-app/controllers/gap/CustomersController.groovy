@@ -18,6 +18,14 @@ class CustomersController {
         respond customersService.get(id)
     }
 
+    def showRentals(Long id){
+
+        Films films = Films.get(id)
+        println id
+        respond films
+    }
+
+
     def create() {
         respond new Customers(params)
     }

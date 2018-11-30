@@ -18,6 +18,18 @@ class FilmsController {
         respond filmsService.get(id)
     }
 
+    def showActors(Long id){
+
+        Films films = filmsService.get(id)
+
+        Actors actors = films.actors.find{
+            it.firstName == params.firstName && it.lastName == params.lastName
+        }
+
+        respond actors
+    }
+
+
     def create() {
         respond new Films(params)
     }

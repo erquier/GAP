@@ -84,7 +84,7 @@
                 <tr>
                     <td>${a.firstName}</td>
                     <td>${a.lastName}</td>
-                    <td><g:link controller="actors" action="show" id="${a.id}">Details</g:link></td>
+                    <td><g:link action="showActors" id="${films.id}" params="[firstName : a.firstName, lastName : a.lastName]">Details</g:link></td>
                 </tr>
             </g:each>
         </table>
