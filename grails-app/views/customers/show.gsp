@@ -70,13 +70,13 @@
 
                     <g:each in="${customers.rentals}" var="r">
                         <tr>
-                            <td>${r.filmName}</td>
+                            <td>${r.filmTitle}</td>
                             <td>${r.rentalDate}</td>
                             <td>${r.returnDate}</td>
                             <td>${r.fimlId}</td>
                             <td>${r.rentalId}</td>
                             <td>${r.staffId}</td>
-                            <td><g:link controller="rentals" action="show" id="${r.id}">Details</g:link></td>
+                            <td><g:link action="show" id="${r.filmId}">Details</g:link></td>
                         </tr>
 
                     </g:each>
